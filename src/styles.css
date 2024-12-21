@@ -5,7 +5,19 @@
 body {
 	background-color: white;
 	font-family: "Gotham";
-	
+	display: grid;
+}
+header {
+	display: inline-flex;
+	align-items: center;
+	padding-bottom: 15px;
+}
+#icon {
+	padding-right: 10px;
+}
+#news {
+	font-size: 19px;
+	padding-left: 5px;
 }
 main {
 	display: inline-flex;

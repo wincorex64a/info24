@@ -4,8 +4,10 @@ export default function App() {
 	return (
 		<>
 			<header>
-				<img height="80" src="logo.png" id="icon"></img>
-				<a id="news"></a>
+				<a href="https://litsey24.ru/index" id="icon-container">
+					<img height="80" src="logo.png" id="icon"></img>
+				</a>
+				<a id="news">Новости</a>
 			</header>
 			<main>
 				<div className="frame" id="container"></div>
