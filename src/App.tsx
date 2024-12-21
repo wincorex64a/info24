@@ -1,3 +1,18 @@
+import './styles.css';
+
 export default function App() {
-	return <main>React ⚛️ + Vite ⚡ + Replit 🌀</main>;
+	return <>
+		<header>
+			<img id="icon"></img>
+			<a id="news"></a>
+		</header>
+		<main>
+			<div id="container">
+				
+			</div>
+			<div id="upcoming">
+				
+			</div>
+		</main>
+	</>;
 }
