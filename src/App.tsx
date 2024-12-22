@@ -8,18 +8,18 @@ export default function App() {
 			</a>
 			<a id="news">Новости</a>
 			<div id="datetime">
-				<a id="date">
+				<div id="date">
 					<a id="day">20</a>
 					<span className="dot">.</span>
 					<a id="month">08</a>
 					<span className="dot">.</span>
 					<a id="year">1993</a>
-				</a>
-				<a id="time">
+				</div>
+				<div id="time">
 					<a id="hour">12</a>
 					<span className="colon">:</span>
 					<a id="minute">00</a>
-				</a>
+				</div>
 			</div>
 		</header>
 		<main>
@@ -39,7 +39,7 @@ export default function App() {
 					<option value="10Б">10Б</option>
 					<option value="11А">11А</option>
 				</select>
-				<button>Загрузить</button>
+				<button id="load_button">Загрузить</button>
 			</div>
 			<div className="frame" id="schedule"></div>
 		</main>

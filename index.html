@@ -8,6 +8,10 @@
 	</head>
 	<body>
 		<script type="module" src="/src/index.tsx"></script>
-		<script type="module" src="/src/ScheduleAnalyzer.js"></script>
+		<script src="/src/ScheduleAnalyzer.js">
+			window.onload = () => {
+				document.getElementById("load_button").onclick = loaderButtonEvent();
+			}
+		</script>
 	</body>
 </html>
