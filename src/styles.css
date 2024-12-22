@@ -2,8 +2,7 @@
 	font-family: "Gotham";
 	src: url("../Gotham.woff2");
 }
-body {
-	background-color: white;
+#root {
 	font-family: "Gotham";
 	display: grid;
 }
