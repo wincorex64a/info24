@@ -24,7 +24,7 @@ function loaderButtonEvent(): void {
 		const classSelector = document.getElementById("class-selector");
 		const schedule = document.getElementById("schedule");
 		const loadButton = document.getElementById("load_button");
-		
+
 		while (!classSelector) {
 			setTimeout(() => {}, 1000);
 		}
@@ -34,7 +34,7 @@ function loaderButtonEvent(): void {
 		while (!loadButton) {
 			setTimeout(() => {}, 1000);
 		}
-		
+
 		var selectedClass = null;
 		classSelector.addEventListener("change", (event) => {
 			if (event.target) {
@@ -74,5 +74,6 @@ function loaderButtonEvent(): void {
 			schedule.appendChild(createScheduleElement(i, arr.name, arr.classroom));
 		}
 		loadButton.onclick = loaderButtonEvent;
+		loaderButtonEvent();
 	}
 }
