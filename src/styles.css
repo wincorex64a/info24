@@ -30,7 +30,7 @@ select {
 	border-color: black;
 	font-family: "Gotham";
 }
-option {
+option,button {
 	border-radius: 2px;
 	border-color: black;
 	font-family: "Gotham";

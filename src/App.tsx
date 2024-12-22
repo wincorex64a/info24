@@ -39,6 +39,7 @@ export default function App() {
 					<option value="10Б">10Б</option>
 					<option value="11А">11А</option>
 				</select>
+				<button>Загрузить</button>
 			</div>
 			<div className="frame" id="schedule"></div>
 		</main>

@@ -12,6 +12,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"@types/jquery": "^3.5.32",
 		"@types/react": "^18.0.15",
 		"@types/react-dom": "^18.0.6",
 		"@vitejs/plugin-react": "^2.0.0",
@@ -19,5 +20,17 @@
 		"react-dom": "^18.2.0",
 		"typescript": "^4.7.4",
 		"vite": "^3.0.4"
+	},
+	"dependencies": {
+		"babel": "^5.8.38",
+		"browserslist": "^4.24.3",
+		"caniuse-lite": "^1.0.30001690",
+		"is-core-module": "^2.16.1",
+		"jquery": "^3.7.1",
+		"jquery-csv": "^1.0.40",
+		"postcss": "^8.4.49",
+		"resolve": "^1.22.10",
+		"supports-preserve-symlinks-flag": "^1.0.0",
+		"update-browserslist-db": "^1.1.1"
 	}
 }
