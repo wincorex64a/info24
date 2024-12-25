@@ -1,281 +1,193 @@
 {
 	"classes": {
-		"5A": {
+		"_5A": {
 			"monday": [
-				{"name": "Разговор о важном", "classroom": [null]},
-				{"name": "Математика", "classroom": [206]},
-				{"name": "Техн./Англ.", "classroom": [103,108]},
-				{"name": "Техн./Англ.", "classroom": [103,108]},
-				{"name": "Музыка", "classroom": [104]},
-				{"name": "Русский язык", "classroom": [208]}
+				{"name": "Разговор о важном", "classroom": [null], "was": null},
+				{"name": "Математика", "classroom": [206], "was": null},
+				{"name": "Техн./Англ.", "classroom": [103,108], "was": null},
+				{"name": "Техн./Англ.", "classroom": [103,108], "was": null},
+				{"name": "Музыка", "classroom": [104], "was": null},
+				{"name": "Русский язык", "classroom": [208], "was": null}
 			],
 			"tuesday": [
-				{"name": "Физкультура", "classroom": [100]},
-				{"name": "История", "classroom": [206]},
-				{"name": "Математика", "classroom": [108]},
-				{"name": "Русский язык", "classroom": [208]},
-				{"name": "Тат.яз./Гос.яз.", "classroom": [220,202]}
+				{"name": "Физкультура", "classroom": [100], "was": null},
+				{"name": "История", "classroom": [206], "was": null},
+				{"name": "Математика", "classroom": [108], "was": null},
+				{"name": "Русский язык", "classroom": [208], "was": null},
+				{"name": "Тат.яз./Гос.яз.", "classroom": [220,202], "was": null}
 			],
 			"wednesday": [
-				{"name": "Биология", "classroom": [107]},
-				{"name": "Русский язык", "classroom": [208]},
-				{"name": "Литература", "classroom": [208]},
-				{"name": "ИЗО", "classroom": [218]},
-				{"name": "Англ./Англ.", "classroom": [316,108]},
-				{"name": "Англ./Англ.", "classroom": [316,108]}
+				{"name": "Биология", "classroom": [107], "was": null},
+				{"name": "Русский язык", "classroom": [208], "was": null},
+				{"name": "Литература", "classroom": [208], "was": null},
+				{"name": "ИЗО", "classroom": [218], "was": null},
+				{"name": "Англ./Англ.", "classroom": [316,108], "was": null},
+				{"name": "Англ./Англ.", "classroom": [316,108], "was": null}
 			],
 			"thursday": [
-				{"name": "Литература", "classroom": [208]},
-				{"name": "Математика", "classroom": [203]},
-				{"name": "Русский язык", "classroom": [208]},
-				{"name": "Тат.яз./Гос.яз.", "classroom": [220,204]},
-				{"name": "Математика", "classroom": [203]},
-				{"name": "Физкультура", "classroom": [100]}
+				{"name": "Литература", "classroom": [208], "was": null},
+				{"name": "Математика", "classroom": [203], "was": null},
+				{"name": "Русский язык", "classroom": [208], "was": null},
+				{"name": "Тат.яз./Гос.яз.", "classroom": [220,204], "was": null},
+				{"name": "Математика", "classroom": [203], "was": null},
+				{"name": "Физкультура", "classroom": [100], "was": null}
 			],
 			"friday": [
-				{"name": "Русский язык", "classroom": [208]},
-				{"name": "География", "classroom": [104]},
-				{"name": "ОДНКНР", "classroom": [206]},
-				{"name": "Тат.лит./Гос.яз.", "classroom": [220,202]},
-				{"name": "Математика", "classroom": [105]}
+				{"name": "Русский язык", "classroom": [208], "was": null},
+				{"name": "География", "classroom": [104], "was": null},
+				{"name": "ОДНКНР", "classroom": [206], "was": null},
+				{"name": "Тат.лит./Гос.яз.", "classroom": [220,202], "was": null},
+				{"name": "Математика", "classroom": [105], "was": null}
 			],
 			"saturday": [
-				{"name": "Математика", "classroom": [201]},
-				{"name": "История", "classroom": [206]},
-				{"name": "Литература", "classroom": [208]},
-				{"name": "Техн./Англ.", "classroom": [103,316]},
-				{"name": "Техн./Англ.", "classroom": [103,316]}
+				{"name": "Математика", "classroom": [201], "was": null},
+				{"name": "История", "classroom": [206], "was": null},
+				{"name": "Литература", "classroom": [208], "was": null},
+				{"name": "Техн./Англ.", "classroom": [103,316], "was": null},
+				{"name": "Техн./Англ.", "classroom": [103,316], "was": null}
 			]
 		},
-		"5B": {
+		"_5B": {
 			"monday": [
-				{"name": "Разговор о важном", "classroom": [null]}
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Англ./Англ.", "classroom": [315,108]},
-				{"name": "Англ./Англ.", "classroom": [315,108]},
-				{"name": "Математика", "classroom": [204]},
-				{"name": "Физкультура", "classroom": [100]}
+				{"name": "Разговор о важном", "classroom": [null], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Англ./Англ.", "classroom": [315,108], "was": null},
+				{"name": "Англ./Англ.", "classroom": [315,108], "was": null},
+				{"name": "Математика", "classroom": [204], "was": null},
+				{"name": "Физкультура", "classroom": [100], "was": null}
 			],
 			"tuesday": [
-				{"name": "Математика", "classroom": [203]},
-				{"name": "Музыка", "classroom": [104]},
-				{"name": "История", "classroom": [206]},
-				{"name": "Математика", "classroom": [204]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Родн.яз./Гос.яз.", "classroom": [210,206]}
+				{"name": "Математика", "classroom": [203], "was": null},
+				{"name": "Музыка", "classroom": [104], "was": null},
+				{"name": "История", "classroom": [206], "was": null},
+				{"name": "Математика", "classroom": [204], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Родн.яз./Гос.яз.", "classroom": [210,206], "was": null}
 			],
 			"wednesday": [
-				{"name": "ИЗО", "classroom": [218]},
-				{"name": "Биология", "classroom": [107]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Литература", "classroom": [205]},
-				{"name": "Англ./Техн.", "classroom": [108,103]},
+				{"name": "ИЗО", "classroom": [218], "was": null},
+				{"name": "Биология", "classroom": [107], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Литература", "classroom": [205], "was": null},
+				{"name": "Англ./Техн.", "classroom": [108,103], "was": null},
 				{"name": "Англ./Техн.", "classroom": [108,103]}
 			],
 			"thursday": [
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Математика", "classroom": [206]},
-				{"name": "Родн.лит./Гос.яз.", "classroom": [210,206]},
-				{"name": "Физкультура", "classroom": [100]},
-				{"name": "Литература", "classroom": [205]}
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Математика", "classroom": [206], "was": null},
+				{"name": "Родн.лит./Гос.яз.", "classroom": [210,206], "was": null},
+				{"name": "Физкультура", "classroom": [100], "was": null},
+				{"name": "Литература", "classroom": [205], "was": null}
 			],
 			"friday": [
-				{"name": "География", "classroom": [104]},
-				{"name": "Родн.лит./Гос.яз.", "classroom": [210,206]},
-				{"name": "Математика", "classroom": [204]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "ОДНКНР", "classroom": [206]}
+				{"name": "География", "classroom": [104], "was": null},
+				{"name": "Родн.лит./Гос.яз.", "classroom": [210,206], "was": null},
+				{"name": "Математика", "classroom": [204], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "ОДНКНР", "classroom": [206], "was": null}
 			],
 			"saturday": [
-				{"name": "Литература", "classroom": [205]},
-				{"name": "Математика", "classroom": [204]},
-				{"name": "История", "classroom": [206]},
-				{"name": "Техн./Англ.", "classroom": [103,315]},
-				{"name": "Техн./Англ.", "classroom": [103,315]}
+				{"name": "Литература", "classroom": [205], "was": null},
+				{"name": "Математика", "classroom": [204], "was": null},
+				{"name": "История", "classroom": [206], "was": null},
+				{"name": "Техн./Англ.", "classroom": [103,315], "was": null},
+				{"name": "Техн./Англ.", "classroom": [103,315], "was": null}
 			]
 		},
-		"6A": {
+		"_6A": {
 			"monday": [
-				{"name": "Разговор о важном", "classroom": [null]},
-				{"name": "Техн./Англ.", "classroom": [216,108]},
+				{"name": "Разговор о важном", "classroom": [null], "was": null},
+				{"name": "Техн./Англ.", "classroom": [216,108], "was": null},
+				{"name": "Тат.яз./Гос.яз.", "classroom": [206,210], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Литература", "classroom": [205], "was": null},
+				{"name": "Математика", "classroom": [202], "was": null}
+			],
+			"tuesday": [
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Литература", "classroom": [205], "was": null},
+				{"name": "История", "classroom": [109], "was": null},
+				{"name": "Математика", "classroom": [202], "was": null},
+				{"name": "Техн./Англ.", "classroom": [216,316], "was": null}
+			],
+			"wednesday": [
+				{"name": "География", "classroom": [104], "was": null},
+				{"name": "Обществознание", "classroom": [109], "was": null},
+				{"name": "ИЗО", "classroom": [218], "was": null},
+				{"name": "Математика", "classroom": [202], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Родн.лит./Гос.яз.", "classroom": [206,210], "was": null}
+			],
+			"thursday": [
+				{"name": "Англ./Техн.", "classroom": [108,216], "was": null},
+				{"name": "Математика", "classroom": [202], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Техн./Англ.", "classroom": [216,316], "was": null},
+				{"name": "Физкультура", "classroom": [100], "was": null},
+				{"name": "Музыка", "classroom": [205], "was": null}
+			],
+			"friday": [
+				{"name": "История", "classroom": [109], "was": null},
+				{"name": "Биология", "classroom": [107], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
 				{"name": "Тат.яз./Гос.яз.", "classroom": [206,210]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Литература", "classroom": [205]},
-				{"name": "Математика", "classroom": [202]}
-			],
-			"tuesday": [
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Литература", "classroom": [205]},
-				{"name": "История", "classroom": [109]},
-				{"name": "Математика", "classroom": [202]},
-				{"name": "Техн./Англ.", "classroom": [216,316]}
-			],
-			"wednesday": [
-				{"name": "География", "classroom": [104]},
-				{"name": "Обществознание", "classroom": [109]},
-				{"name": "ИЗО", "classroom": [218]},
-				{"name": "Математика", "classroom": [202]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Родн.лит./Гос.яз.", "classroom": [206,210]}
-			],
-			"thursday": [
-				{"name": "Англ./Техн.", "classroom": [108,216]},
-				{"name": "Математика", "classroom": [202]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Техн./Англ.", "classroom": [216,316]},
-				{"name": "Физкультура", "classroom": [100]},
-				{"name": "Музыка", "classroom": [205]}
-			],
-			"friday": [
-				{"name": "История", "classroom": [109]},
-				{"name": "Биология", "classroom": [107]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Тат.яз./Гос.яз.", "classroom": [206,210]},
-				{"name": "Математика", "classroom": [202]},
-				{"name": "Литература", "classroom": [205]}
+				{"name": "Математика", "classroom": [202], "was": null},
+				{"name": "Литература", "classroom": [205], "was": null}
 			],
 			"saturday": [
-				{"name": "ОДНКНР", "classroom": [206]},
-				{"name": "Математика", "classroom": [202]},
-				{"name": "Англ./Англ.", "classroom": [108,316]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Физкультура", "classroom": [100]}
+				{"name": "ОДНКНР", "classroom": [206], "was": null},
+				{"name": "Математика", "classroom": [202], "was": null},
+				{"name": "Англ./Англ.", "classroom": [108,316], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Физкультура", "classroom": [100], "was": null}
 			]
 		},
-		"6B": {
+		"_6B": {
 			"monday": [
-				{"name": "Разговор о важном", "classroom": [null]},
-				{"name": "Тат.яз./Гос.яз.", "classroom": [220,210]},
-				{"name": "Русский язык", "classroom": [205]},
-				{"name": "Математика", "classroom": [201]},
-				{"name": "Техн./Англ.", "classroom": [216,108]},
-				{"name": "История", "classroom": [109]}
+				{"name": "Разговор о важном", "classroom": [null], "was": null},
+				{"name": "Тат.яз./Гос.яз.", "classroom": [220,210], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null},
+				{"name": "Математика", "classroom": [201], "was": null},
+				{"name": "Техн./Англ.", "classroom": [216,108], "was": null},
+				{"name": "История", "classroom": [109], "was": null}
 			],
 			"tuesday": [
-				{"name": "Математика", "classroom": [201]},
-				{"name": "Обществознание", "classroom": [109]},
-				{"name": "Литература", "classroom": [205]},
-				{"name": "Англ./Техн.", "classroom": [316,216]},
-				{"name": "Физкультура", "classroom": [100]},
-				{"name": "Русский язык", "classroom": [205]}
+				{"name": "Математика", "classroom": [201], "was": null},
+				{"name": "Обществознание", "classroom": [109], "was": null},
+				{"name": "Литература", "classroom": [205], "was": null},
+				{"name": "Англ./Техн.", "classroom": [316,216], "was": null},
+				{"name": "Физкультура", "classroom": [100], "was": null},
+				{"name": "Русский язык", "classroom": [205], "was": null}
 			],
 			"wednesday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null}
 			],
 			"thursday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null}
 			],
 			"friday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null}
 			],
 			"saturday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			]
-		},
-		"7A": {
-			"monday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"tuesday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"wednesday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"thursday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"friday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"saturday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			]
-		},
-		"7B": {
-			"monday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"tuesday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"wednesday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"thursday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"friday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
-			],
-			"saturday": [
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []},
-				{"name": "", "classroom": []}
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null},
+				{"name": "", "classroom": [], "was": null}
 			]
 		}
 	}
