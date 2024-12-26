@@ -1,7 +1,7 @@
 import "./styles.css";
 import "./res/20241007-middle.json";
 let data: any;
-fetch("./res/20241007-middle.json")
+fetch("/res/20241007-middle.json")
   	.then((res) => res.json())
   	.then((data_from_file) => {
     	data = data_from_file;
