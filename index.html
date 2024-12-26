@@ -3,11 +3,58 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" type="text/css" href="/src/style.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite + React + TypeScript</title>
+		<title>🔷 Vite + TypeScript</title>
 	</head>
 	<body>
-		<script type="module" src="/src/index.tsx"></script>
-		<div id="root"></div>
+		<script type="module" src="/src/App.tsx">
+			document.getElementById("loader-button").onclick = () => {
+				loaderButtonEvent();
+			}
+		</script>
+		<div id="root">
+			<header>
+				<a href="https://litsey24.ru/index" id="icon-container">
+					<img height="80" src="logo.png" id="icon" />
+				</a>
+				<a id="news">Новости</a>
+				<div id="datetime">
+					<div id="date">
+						<a id="day">20</a>
+						<span class="dot">.</span>
+						<a id="month">08</a>
+						<span class="dot">.</span>
+						<a id="year">1993</a>
+					</div>
+					<div id="time">
+						<a id="hour">12</a>
+						<span class="colon">:</span>
+						<a id="minute">00</a>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="frame" id="class-select">
+					<select id="class-selector">
+						<option value="_5A">5А</option>
+						<option value="_5B">5Б</option>
+						<option value="_6A">6А</option>
+						<option value="_6B">6Б</option>
+						<option value="_7A">7А</option>
+						<option value="_7B">7Б</option>
+						<option value="_8A">8А</option>
+						<option value="_8B">8Б</option>
+						<option value="_9A">9А</option>
+						<option value="_9B">9Б</option>
+						<option value="_10A">10А</option>
+						<option value="_10B">10Б</option>
+						<option value="_11A">11</option>
+					</select>
+					<input id="loader-button" type="button" value="Загрузить" />
+				</div>
+				<div class="frame" id="schedule"></div>
+			</main>
+		</div>
 	</body>
 </html>
