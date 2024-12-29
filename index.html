@@ -8,11 +8,7 @@
 		<title>🔷 Vite + TypeScript</title>
 	</head>
 	<body>
-		<script type="module" src="/src/App.tsx">
-			document.getElementById("loader-button").onclick = () => {
-				loaderButtonEvent();
-			}
-		</script>
+		<script type="module" src="/src/App.tsx"></script>
 		<div id="root">
 			<header>
 				<a href="https://litsey24.ru/index" id="icon-container">
@@ -51,7 +47,7 @@
 						<option value="_10B">10Б</option>
 						<option value="_11A">11</option>
 					</select>
-					<input id="loader-button" type="button" value="Загрузить" onclick="loaderButtonEvent()" />
+					<input id="loader-button" type="button" value="Загрузить" />
 				</div>
 				<div class="frame" id="schedule"></div>
 			</main>
