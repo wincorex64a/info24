@@ -1,8 +1,10 @@
 import "./styles.css";
 import "/res/s20241007_middle.json";
-var data;
+var data: {};
 fetch("/res/s20241007_middle.json").then((response: Response) => {
-	data = JSON.parse(response.text());
+	return response.text();
+}).then((text: string) => {
+	data = JSON.parse(text);
 })
 
 export function createScheduleElement(index: number, subject: string, classroom: number, isReplacement: boolean): HTMLDivElement {
@@ -72,7 +74,7 @@ export function loaderButtonEvent(): void {
 			break;
 	}
 	if (dotw == "sunday") return;
-	const arr =  [selectedClass][dotw];
+	const arr = [selectedClass][dotw];
 	for (var i = 1; i < arr.length; i++) {
 		scheduleTab.appendChild(createScheduleElement(i, arr.name, arr.classroom, arr.was == null));
 	}
