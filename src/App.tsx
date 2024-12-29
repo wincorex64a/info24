@@ -1,14 +1,10 @@
 import "./styles.css";
-import "./res/20241007-middle.json";
-let data: any;
-fetch("/res/20241007-middle.json")
-  	.then((res) => res.json())
-  	.then((data_from_file) => {
-    	data = data_from_file;
-  	})
-  	.catch(err => {
-  		console.error("Ошибка загрузки JSON:", err);
-  	});
+import "/res/s20241007_middle.json";
+var data;
+fetch("/res/s20241007_middle.json").then((response: Response) => {
+	data = JSON.parse(response.text());
+})
+
 export function createScheduleElement(index: number, subject: string, classroom: number, isReplacement: boolean): HTMLDivElement {
 	var p = document.createElement("div");
 	p.setAttribute("style", "align-items: center; display-inline: flex;".concat(isReplacement ? " color: red;" : ""));
@@ -29,13 +25,13 @@ export function createScheduleElement(index: number, subject: string, classroom:
 }
 export function loaderButtonEvent(): void {
 	const classSelector = document.getElementById("class-selector");
-	const schedule = document.getElementById("schedule");
+	const scheduleTab = document.getElementById("schedule");
 	const loadButton = document.getElementById("load_button");
 
 	while (!classSelector) {
 		setTimeout(() => {}, 1000);
 	}
-	while (!schedule) {
+	while (!scheduleTab) {
 		setTimeout(() => {}, 1000);
 	}
 	while (!loadButton) {
@@ -76,9 +72,9 @@ export function loaderButtonEvent(): void {
 			break;
 	}
 	if (dotw == "sunday") return;
-	const arr = data[selectedClass][dotw];
+	const arr =  [selectedClass][dotw];
 	for (var i = 1; i < arr.length; i++) {
-		schedule.appendChild(createScheduleElement(i, arr.name, arr.classroom, arr.was == null));
+		scheduleTab.appendChild(createScheduleElement(i, arr.name, arr.classroom, arr.was == null));
 	}
 }
 
@@ -91,12 +87,5 @@ export function showcaseMode(): void {
 		var clzr: number = Number(clz);
 		var randomWas: boolean = Math.floor(Math.random() * 2) == 1;
 		createScheduleElement(i+1, "Предмет", clzr, randomWas);
-	}
-}
-
-window.onload = () => {
-	const loadButton = document.getElementById("load_button");
-	if (loadButton) {
-		loadButton.onclick = loaderButtonEvent;
 	}
 }
