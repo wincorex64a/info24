@@ -1,6 +1,15 @@
 import "./styles.css";
 import "/res/s20241007_middle.json";
-var data: {};
+interface ScheduleData {
+	[key: string]: {
+		[day: string]: {
+			name: string;
+			classroom: number[];
+			was: number[] | null;
+		}[];
+	};
+}
+var data: ScheduleData;
 fetch("/res/s20241007_middle.json").then((response: Response) => {
 	return response.text();
 }).then((text: string) => {
@@ -74,7 +83,7 @@ export function loaderButtonEvent(): void {
 			break;
 	}
 	if (dotw == "sunday") return;
-	const arr = [selectedClass][dotw];
+	const arr = data[selectedClass][dotw];
 	for (var i = 1; i < arr.length; i++) {
 		scheduleTab.appendChild(createScheduleElement(i, arr.name, arr.classroom, arr.was == null));
 	}
