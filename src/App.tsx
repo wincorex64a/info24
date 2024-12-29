@@ -1,5 +1,5 @@
 import "./styles.css";
-import "/res/s20241007_middle.json";
+import "./res/s20241007_middle.json";
 interface ScheduleData {
 	[key: string]: {
 		[day: string]: {
@@ -9,14 +9,17 @@ interface ScheduleData {
 		}[];
 	};
 }
+function isNotNull(value: number[] | null): value is number[] {
+	return value !== null;
+}
 var data: ScheduleData;
-fetch("/res/s20241007_middle.json").then((response: Response) => {
+fetch("./res/s20241007_middle.json").then((response: Response) => {
 	return response.text();
 }).then((text: string) => {
-	data = JSON.parse(text);
+	data = JSON.parse(text) as ScheduleData;
 })
 
-export function createScheduleElement(index: number, subject: string, classroom: number, isReplacement: boolean): HTMLDivElement {
+export function createScheduleElement(index: number, subject: string, classroom: number[], isReplacement: boolean): HTMLDivElement {
 	var p = document.createElement("div");
 	p.setAttribute("style", "align-items: center; display-inline: flex;".concat(isReplacement ? " color: red;" : ""));
 	var n = document.createElement("p");
@@ -30,7 +33,7 @@ export function createScheduleElement(index: number, subject: string, classroom:
 	c.appendChild(s);
 	var r = document.createElement("p");
 	r.setAttribute("style", "margin: 2px 0px 0px 0px;".concat(isReplacement ? " color: red;" : ""));
-	r.innerHTML = classroom.toString();
+	r.innerHTML = classroom.join("/");
 	c.appendChild(r);
 	return p;
 }
@@ -85,7 +88,7 @@ export function loaderButtonEvent(): void {
 	if (dotw == "sunday") return;
 	const arr = data[selectedClass][dotw];
 	for (var i = 1; i < arr.length; i++) {
-		scheduleTab.appendChild(createScheduleElement(i, arr.name, arr.classroom, arr.was == null));
+		scheduleTab.appendChild(createScheduleElement(i, arr[i].name, arr[i].classroom, isNotNull(arr[i].was)));
 	}
 }
 
@@ -95,8 +98,7 @@ export function showcaseMode(): void {
 		var clz: string = "";
 		clz = clz.concat(Math.floor(Math.random() * 3).toString());
 		clz = clz.concat((Math.floor(Math.random() * 10).toString()).padStart(2, '0'));
-		var clzr: number = Number(clz);
 		var randomWas: boolean = Math.floor(Math.random() * 2) == 1;
-		createScheduleElement(i+1, "Предмет", clzr, randomWas);
+		createScheduleElement(i+1, "Предмет", [Number(clz)] as number[], randomWas);
 	}
 }
