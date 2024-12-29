@@ -1,5 +1,4 @@
 import "./styles.css";
-import "./res/s20241007_middle.json";
 interface ScheduleData {
 	[key: string]: {
 		[day: string]: {
