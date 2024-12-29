@@ -1,4 +1,5 @@
 import "./styles.css";
+import ReactDOM from "react-dom/client";
 interface ScheduleData {
 	[key: string]: {
 		[day: string]: {
@@ -23,28 +24,19 @@ if (xhr.status === 200) {
 } else {
 	console.error(xhr.status.toString().concat(" ").concat(xhr.statusText));
 }
-export function createScheduleElement(index: number, subject: string, classroom: number[], isReplacement: boolean): HTMLDivElement {
-	var p = document.createElement("div");
-	p.setAttribute("style", "align-items: center; display-inline: flex;".concat(isReplacement ? " color: red;" : ""));
-	var n = document.createElement("p");
-	n.setAttribute("style", "margin: 5px 13px 5px 5px; font-size: xxx-large; font-weight: bold;".concat(isReplacement ? " color: red;" : ""));
-	n.innerHTML = index.toString();
-	p.appendChild(n);
-	var c = document.createElement("div");
-	var s = document.createElement("p");
-	s.setAttribute("style", "margin: 0px 0px 2px 0px;".concat(isReplacement ? " color: red;" : ""));
-	s.innerHTML = subject;
-	c.appendChild(s);
-	var r = document.createElement("p");
-	r.setAttribute("style", "margin: 2px 0px 0px 0px;".concat(isReplacement ? " color: red;" : ""));
-	r.innerHTML = classroom.join("/");
-	c.appendChild(r);
-	return p;
+export function ScheduleElement({index, subject, classroom, isReplacement}: {index: number, subject: string, classroom: number[], isReplacement: boolean}): React.ReactElement {
+	return <div style={{ alignItems: "center", display: "inline-flex", color: isReplacement ? "red" : "inherit" }}>
+		<p style={{ margin: "5px 13px 5px 5px", fontSize: "xxx-large", fontWeight: "bold", color: isReplacement ? "red" : "inherit" }}>{index}</p>
+		<div>
+			<p style={{ margin: "0px 0px 2px 0px", color: isReplacement ? "red" : "inherit" }}>{subject}</p>
+			<p style={{ margin: "2px 0px 0px 0px", color: isReplacement ? "red" : "inherit" }}>{classroom.join("/")}</p>
+		</div>
+	</div>;
 }
 export function loaderButtonEvent(): void {
 	const classSelector = document.getElementById("class-selector");
 	const scheduleTab = document.getElementById("schedule");
-	const loadButton = document.getElementById("load_button");
+	const loadButton = document.getElementById("loader_button");
 
 	while (!classSelector) {
 		setTimeout(() => {}, 1000);
@@ -55,6 +47,7 @@ export function loaderButtonEvent(): void {
 	while (!loadButton) {
 		setTimeout(() => {}, 1000);
 	}
+	console.log(classSelector, scheduleTab, loadButton);
 
 	var selectedClass: string = "";
 	classSelector.addEventListener("change", (event) => {
@@ -65,6 +58,7 @@ export function loaderButtonEvent(): void {
 	while (!selectedClass) {
 		setTimeout(() => {}, 1000);
 	}
+	console.log(selectedClass);
 	let dotw: string = "";
 	switch (new Date().getDay()) {
 		case 1:
@@ -87,16 +81,26 @@ export function loaderButtonEvent(): void {
 			break;
 		default:
 			dotw = "sunday";
-			break;
+			return;
 	}
-	if (dotw == "sunday") return;
+	console.log(dotw);
 	const arr = data[selectedClass][dotw];
+	console.log(arr, arr.length);
 	for (var i = 1; i < arr.length; i++) {
-		scheduleTab.appendChild(createScheduleElement(i, arr[i].name, arr[i].classroom, isNotNull(arr[i].was)));
+		ReactDOM.createRoot(scheduleTab).render(
+			<ScheduleElement
+				index={i}
+				subject={arr[i].name}
+				classroom={arr[i].classroom}
+				isReplacement={isNotNull(arr[i].was)}
+			/>
+		);
 	}
 }
 
-export function showcaseMode(): void {
+
+
+/*export function showcaseMode(): void {
 	var randomNum: number = 5 + Math.floor(Math.random() * 3);
 	for (var i = 0; i < randomNum; i++) {
 		var clz: string = "";
@@ -105,4 +109,4 @@ export function showcaseMode(): void {
 		var randomWas: boolean = Math.floor(Math.random() * 2) == 1;
 		createScheduleElement(i+1, "Предмет", [Number(clz)] as number[], randomWas);
 	}
-}
+}*/
