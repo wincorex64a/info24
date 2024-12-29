@@ -13,12 +13,18 @@ function isNotNull(value: number[] | null): value is number[] {
 	return value !== null;
 }
 var data: ScheduleData;
-fetch("./res/s20241007_middle.json").then((response: Response) => {
-	return response.text();
-}).then((text: string) => {
-	data = JSON.parse(text) as ScheduleData;
-})
-
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "./res/s20241007_middle.json", false);
+xhr.send();
+xhr.onerror = () => {
+	console.error("Error while loading data");
+}
+if (xhr.status === 200) {
+  	data = JSON.parse(xhr.responseText) as ScheduleData;
+} else {
+	console.error(xhr.status.toString().concat(" ").concat(xhr.statusText));
+}
+console.log(data);
 export function createScheduleElement(index: number, subject: string, classroom: number[], isReplacement: boolean): HTMLDivElement {
 	var p = document.createElement("div");
 	p.setAttribute("style", "align-items: center; display-inline: flex;".concat(isReplacement ? " color: red;" : ""));
