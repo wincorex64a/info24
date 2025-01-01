@@ -1,20 +1,27 @@
 import "./styles.css";
 import ReactDOM from "react-dom/client";
+type WasData = {
+	name: string;
+	classroom: number[] | null;
+};
 interface ScheduleData {
 	[key: string]: {
 		[day: string]: {
 			name: string;
 			classroom: number[] | null;
-			was: number[] | null;
+			was: WasData | null;
 		}[];
 	};
 }
-function isNotNull(value: number[] | null): value is number[] {
+function isNotNull(value: WasData | null): value is WasData {
 	return value !== null;
+}
+function arrayIsNotNull<A>(array: A[] | null): array is A[] {
+	return array !== null;
 }
 var data: ScheduleData;
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "../src/res/s20241007_middle.json", false);
+xhr.open("GET", "../src/res/%schedule%", false);
 xhr.send();
 xhr.onerror = () => {
 	console.error("Error while loading data");
@@ -28,19 +35,19 @@ function ScheduleElement({
 	index,
 	subject,
 	classroom,
-	isReplacement,
+	wasData,
 }: {
 	index: number;
 	subject: string;
 	classroom: number[] | null;
-	isReplacement: boolean;
+	wasData: WasData | null;
 }): React.ReactElement {
 	return (
 		<div
 			style={{
 				alignItems: "center",
 				display: "inline-flex",
-				color: isReplacement ? "red" : "inherit",
+				color: "inherit",
 			}}
 		>
 			<p
@@ -48,7 +55,7 @@ function ScheduleElement({
 					margin: "5px 13px 5px 5px",
 					fontSize: "xxx-large",
 					fontWeight: "bold",
-					color: isReplacement ? "red" : "inherit",
+					color: "inherit",
 				}}
 			>
 				{index}
@@ -57,7 +64,7 @@ function ScheduleElement({
 				<p
 					style={{
 						margin: "0px 0px 2px 0px",
-						color: isReplacement ? "red" : "inherit",
+						color: (isNotNull(wasData) && wasData.name != subject) ? "red" : "inherit",
 					}}
 				>
 					{subject}
@@ -65,10 +72,10 @@ function ScheduleElement({
 				<p
 					style={{
 						margin: "2px 0px 0px 0px",
-						color: isReplacement ? "red" : "inherit",
+						color: (isNotNull(wasData) && wasData.classroom != classroom) ? "red" : "inherit",
 					}}
 				>
-					{isNotNull(classroom) ? classroom.join("/") : "?"}
+					{arrayIsNotNull(classroom) ? classroom.join("/") : "—"}
 				</p>
 			</div>
 		</div>
@@ -126,7 +133,7 @@ export var pageutils = {
 									index={i}
 									subject={arr[i].name}
 									classroom={arr[i].classroom}
-									isReplacement={isNotNull(arr[i].was)}
+									wasData={arr[i].was}
 								/>
 							);
 						}
