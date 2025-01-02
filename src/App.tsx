@@ -143,11 +143,35 @@ export var pageutils = {
 			}
 		}, 1000);
 	},
+	activateClock: () => {
+		const year = document.getElementById("year");
+		const month = document.getElementById("month");
+		const day = document.getElementById("day");
+		const hour = document.getElementById("hour");
+		const minute = document.getElementById("minute");
+
+		let intervalId3 = setInterval(() => {
+			if (year && month && day && hour && minute) {
+				clearInterval(intervalId3);
+				setInterval(() => {
+					let d: Date = new Date();
+					year.innerText = d.getFullYear().toString();
+					month.innerText = (d.getMonth() + 1).toString().padStart(2, '0');
+					day.innerText = d.getDate().toString().padStart(2, '0');
+					hour.innerText = d.getHours().toString().padStart(2, '0');
+					minute.innerText = d.getMinutes().toString().padStart(2, '0');
+				}, 1000);
+			}
+		}, 1000);
+	}
 };
 
 const loadButton = document.getElementById("loader-button");
 if (loadButton) {
 	loadButton.onclick = pageutils.loaderButtonEvent;
+}
+if (document.getElementById("datetime")) {
+	pageutils.activateClock();
 }
 
 /*export function showcaseMode(): void {
