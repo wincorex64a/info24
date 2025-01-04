@@ -66,6 +66,7 @@ function ScheduleElement({
 						margin: "0px 0px 2px 0px",
 						color: (isNotNull(wasData) && wasData.name != subject) ? "red" : "inherit",
 					}}
+					title={isNotNull(wasData) ? "Было: ".concat(wasData.name) : "Изначальное значение"}
 				>
 					{subject}
 				</p>
@@ -74,6 +75,7 @@ function ScheduleElement({
 						margin: "2px 0px 0px 0px",
 						color: (isNotNull(wasData) && wasData.classroom != classroom) ? "red" : "inherit",
 					}}
+					title={isNotNull(wasData) ? "Было: ".concat((arrayIsNotNull(wasData.classroom) ? wasData.classroom : "—").toString()) : "Изначальное значение"}
 				>
 					{arrayIsNotNull(classroom) ? classroom.join("/") : "—"}
 				</p>
@@ -173,14 +175,3 @@ if (loadButton) {
 if (document.getElementById("datetime")) {
 	pageutils.activateClock();
 }
-
-/*export function showcaseMode(): void {
-	var randomNum: number = 5 + Math.floor(Math.random() * 3);
-	for (var i = 0; i < randomNum; i++) {
-		var clz: string = "";
-		clz = clz.concat(Math.floor(Math.random() * 3).toString());
-		clz = clz.concat((Math.floor(Math.random() * 10).toString()).padStart(2, '0'));
-		var randomWas: boolean = Math.floor(Math.random() * 2) == 1;
-		createScheduleElement(i+1, "Предмет", [Number(clz)] as number[], randomWas);
-	}
-}*/
