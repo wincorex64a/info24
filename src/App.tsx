@@ -29,7 +29,7 @@ xhr.onerror = () => {
 if (xhr.status === 200) {
 	data = JSON.parse(xhr.responseText) as ScheduleData;
 } else {
-	console.error(xhr.status.toString().concat(" ").concat(xhr.statusText));
+	console.error(xhr.status.toString().concat(" ", xhr.statusText));
 }
 function ScheduleElement({
 	index,
@@ -84,25 +84,25 @@ function ScheduleElement({
 	);
 }
 export var pageutils = {
-	loaderButtonEvent: () => {
+	launchScheduleLoader: () => {
 		const classSelector = document.getElementById("class-selector");
 		const scheduleTab = document.getElementById("schedule");
-		const loadButton = document.getElementById("loader-button");
-
+		var tab: ReactDOM.Root;
 		let intervalId = setInterval(() => {
-			if (classSelector && scheduleTab && loadButton) {
+			if (classSelector && scheduleTab) {
 				clearInterval(intervalId);
-
-				var selectedClass: string = "";
+				tab = ReactDOM.createRoot(scheduleTab);
+				var selectedClass: string;
 				classSelector.addEventListener("change", (event) => {
 					if (event.target) {
-						selectedClass = (event.target as HTMLOptionElement).value;
+						selectedClass = "_".concat((event.target as HTMLOptionElement).value.split("_").reverse().join(""));
+						console.log(selectedClass);
 					}
 				});
 				let intervalId2 = setInterval(() => {
 					if (selectedClass) {
 						clearInterval(intervalId2);
-						let dotw: string = "";
+						let dotw: string;
 						switch (new Date().getDay()) {
 							case 1:
 								dotw = "monday";
@@ -126,8 +126,17 @@ export var pageutils = {
 								dotw = "sunday";
 								return;
 						}
-						const arr = data[selectedClass][dotw];
-						var tab = ReactDOM.createRoot(scheduleTab);
+						console.log(dotw);
+						var arr = data[selectedClass][dotw];
+						if (!data) arr = [
+							{name: "Предмет 1", classroom: null, was: null},
+							{name: "Предмет 2", classroom: [109], was: {name: "Предмет 1", classroom: null} as WasData},
+							{name: "Предмет 3", classroom: [205], was: {name: "Предмет 3", classroom: [207]} as WasData},
+							{name: "Предмет 4", classroom: [202], was: {name: "Предмет 2", classroom: [201]}},
+							{name: "Пр.5/Пр.6", classroom: [103,216], was: null},
+							{name: "Пр.6/Пр.5", classroom: [216,103], was: {name: "Пр.5/Пр.6", classroom: [103,216]} as WasData}
+						]
+						console.log(arr);
 						var nodes: Array<React.ReactNode> = [];
 						for (var i = 1; i < arr.length; i++) {
 							nodes.push(
@@ -168,10 +177,7 @@ export var pageutils = {
 	}
 };
 
-const loadButton = document.getElementById("loader-button");
-if (loadButton) {
-	loadButton.onclick = pageutils.loaderButtonEvent;
-}
-if (document.getElementById("datetime")) {
+if (document.getElementById("datetime") && document.getElementById("schedule")) {
+	pageutils.launchScheduleLoader();
 	pageutils.activateClock();
 }
