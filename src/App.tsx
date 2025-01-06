@@ -1,5 +1,6 @@
 import "./styles.css";
 import ReactDOM from "react-dom/client";
+import React from "react";
 type WasData = {
 	name: string;
 	classroom: number[] | null;
@@ -29,8 +30,8 @@ function isNotNull<T>(value: T | null): value is T {
 function arrayIsNotNull<T>(array: Array<T> | null): array is Array<T> {
 	return array !== null;
 }
-var data: ScheduleData;
-var xhr = new XMLHttpRequest();
+let data: ScheduleData;
+let xhr: XMLHttpRequest = new XMLHttpRequest();
 xhr.open("GET", "../src/res/s20250901.json", false);
 xhr.send();
 if (xhr.status === 200) {
@@ -90,17 +91,20 @@ function ScheduleElement({
 		</div>
 	);
 }
-export var pageutils = {
-	launchScheduleLoader: () => {
-		const classSelector = document.getElementById("class-selector");
-		const scheduleTab = document.getElementById("schedule");
-		var tab: ReactDOM.Root;
-		let intervalId = setInterval(() => {
+export let pageutils: {
+	launchScheduleLoader: () => void,
+	activateClock: () => void
+} = {
+	launchScheduleLoader: (): void => {
+		const classSelector: HTMLElement | null = document.getElementById("class-selector");
+		const scheduleTab: HTMLElement | null = document.getElementById("schedule");
+		let tab: ReactDOM.Root;
+		let intervalId: number = setInterval((): void => {
 			if (classSelector && scheduleTab) {
 				clearInterval(intervalId);
 				tab = ReactDOM.createRoot(scheduleTab);
-				var selectedClass: string;
-				classSelector.addEventListener("change", (event) => {
+				let selectedClass: string;
+				classSelector.addEventListener("change", (event: Event): void => {
 					if (event.target) {
 						selectedClass = "_".concat((event.target as HTMLOptionElement).value.split("_").reverse().join(""));
 						tab.unmount();
@@ -108,7 +112,7 @@ export var pageutils = {
 						console.log(selectedClass);
 					}
 				});
-				/*let intervalId2 = */setInterval(() => {
+				/*let intervalId2 = */setInterval((): void => {
 					if (selectedClass) {
 						let dotw: DOTW;
 						switch (new Date().getDay()) {
@@ -134,7 +138,7 @@ export var pageutils = {
 								return;
 						}
 						console.log(dotw);
-						var arr = data.classes[selectedClass][dotw] || [
+						let arr: {name: string, classroom: number[] | null, was: WasData | null}[] = data.classes[selectedClass][dotw] || [
 							{name: "Предмет 1", classroom: null, was: null},
 							{name: "Предмет 2", classroom: [109], was: {name: "Предмет 1", classroom: null} as WasData},
 							{name: "Предмет 3", classroom: [205], was: {name: "Предмет 3", classroom: [207]} as WasData},
@@ -143,8 +147,8 @@ export var pageutils = {
 							{name: "Пр.6/Пр.5", classroom: [216,103], was: {name: "Пр.5/Пр.6", classroom: [103,216]} as WasData}
 						];
 						console.log(arr);
-						var nodes: Array<React.ReactNode> = [];
-						for (var i = 0; i < arr.length; i++) {
+						let nodes: Array<React.ReactNode> = [];
+						for (let i: number = 0; i < arr.length; i++) {
 							nodes.push(
 								<ScheduleElement
 									index={i+1}
@@ -160,17 +164,17 @@ export var pageutils = {
 			}
 		}, 1000);
 	},
-	activateClock: () => {
-		const year = document.getElementById("year");
-		const month = document.getElementById("month");
-		const day = document.getElementById("day");
-		const hour = document.getElementById("hour");
-		const minute = document.getElementById("minute");
+	activateClock: (): void => {
+		const year: HTMLElement | null = document.getElementById("year");
+		const month: HTMLElement | null = document.getElementById("month");
+		const day: HTMLElement | null = document.getElementById("day");
+		const hour: HTMLElement | null = document.getElementById("hour");
+		const minute: HTMLElement | null = document.getElementById("minute");
 
-		let intervalId3 = setInterval(() => {
+		let intervalId3: number = setInterval((): void => {
 			if (year && month && day && hour && minute) {
 				clearInterval(intervalId3);
-				setInterval(() => {
+				setInterval((): void => {
 					let d: Date = new Date();
 					year.innerText = d.getFullYear().toString();
 					month.innerText = (d.getMonth() + 1).toString().padStart(2, '0');
