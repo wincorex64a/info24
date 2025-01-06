@@ -4,6 +4,13 @@ type WasData = {
 	name: string;
 	classroom: number[] | null;
 };
+type DOTW = 
+	"monday" | 
+	"tuesday" | 
+	"wednesday" | 
+	"thursday" | 
+	"friday" | 
+	"saturday";
 interface ScheduleData {
 	[key: string]: {
 		[day: string]: {
@@ -102,7 +109,7 @@ export var pageutils = {
 				let intervalId2 = setInterval(() => {
 					if (selectedClass) {
 						clearInterval(intervalId2);
-						let dotw: string;
+						let dotw: DOTW;
 						switch (new Date().getDay()) {
 							case 1:
 								dotw = "monday";
@@ -123,7 +130,6 @@ export var pageutils = {
 								dotw = "saturday";
 								break;
 							default:
-								dotw = "sunday";
 								return;
 						}
 						console.log(dotw);

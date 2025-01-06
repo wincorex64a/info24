@@ -1,0 +1,404 @@
+{
+	"classes": {
+		"_8A": {
+			"monday": [
+				{"name": "Разговор о важном", "classroom": null, "was": null},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"tuesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"wednesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"thursday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"friday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"saturday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			]
+		},
+		"_8B": {
+			"monday": [
+				{"name": "Разговор о важном", "classroom": null, "was": null},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"tuesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"wednesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"thursday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"friday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"saturday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			]
+		},
+		"_9A": {
+			"monday": [
+				{"name": "Разговор о важном", "classroom": null, "was": null},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"tuesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"wednesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"thursday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"friday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"saturday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			]
+		},
+		"_9B": {
+			"monday": [
+				{"name": "Разговор о важном", "classroom": null, "was": null},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"tuesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"wednesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"thursday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"friday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"saturday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			]
+		},
+		"_10A": {
+			"monday": [
+				{"name": "Разговор о важном", "classroom": null, "was": null},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"tuesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"wednesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"thursday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"friday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"saturday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			]
+		},
+		"_10B": {
+			"monday": [
+				{"name": "Разговор о важном", "classroom": null, "was": null},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"tuesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"wednesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"thursday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"friday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"saturday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			]
+		},
+		"_11A": {
+			"monday": [
+				{"name": "Разговор о важном", "classroom": null, "was": null},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"tuesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"wednesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"thursday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"friday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"saturday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			]
+		},
+		"_11B": {
+			"monday": [
+				{"name": "Разговор о важном", "classroom": null, "was": null},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"tuesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"wednesday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"thursday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"friday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			],
+			"saturday": [
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}},
+				{"name": "", "classroom": [], "was": {"name": "", "classroom": []}}
+			]
+		}
+	}
+}
