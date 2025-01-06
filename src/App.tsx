@@ -12,27 +12,27 @@ type DOTW =
 	"friday" | 
 	"saturday";
 interface ScheduleData {
-	[key: string]: {
-		[day: string]: {
-			name: string;
-			classroom: number[] | null;
-			was: WasData | null;
-		}[];
+	classes: {
+		[key: string]: {
+			[day: string]: {
+				name: string;
+				classroom: number[] | null;
+				was: WasData | null;
+			}[];
+		};
 	};
 }
+
 function isNotNull(value: WasData | null): value is WasData {
 	return value !== null;
 }
-function arrayIsNotNull<A>(array: A[] | null): array is A[] {
+function arrayIsNotNull<T>(array: Array<T> | null): array is Array<T> {
 	return array !== null;
 }
 var data: ScheduleData;
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "../src/res/%schedule%", false);
+xhr.open("GET", "../src/res/s20250901.json", false);
 xhr.send();
-xhr.onerror = () => {
-	console.error("Error while loading data");
-};
 if (xhr.status === 200) {
 	data = JSON.parse(xhr.responseText) as ScheduleData;
 } else {
@@ -103,12 +103,13 @@ export var pageutils = {
 				classSelector.addEventListener("change", (event) => {
 					if (event.target) {
 						selectedClass = "_".concat((event.target as HTMLOptionElement).value.split("_").reverse().join(""));
+						tab.unmount();
+						tab = ReactDOM.createRoot(scheduleTab);
 						console.log(selectedClass);
 					}
 				});
 				let intervalId2 = setInterval(() => {
 					if (selectedClass) {
-						clearInterval(intervalId2);
 						let dotw: DOTW;
 						switch (new Date().getDay()) {
 							case 1:
@@ -133,21 +134,20 @@ export var pageutils = {
 								return;
 						}
 						console.log(dotw);
-						var arr = data[selectedClass][dotw];
-						if (!data) arr = [
+						var arr = data.classes[selectedClass][dotw] || [
 							{name: "Предмет 1", classroom: null, was: null},
 							{name: "Предмет 2", classroom: [109], was: {name: "Предмет 1", classroom: null} as WasData},
 							{name: "Предмет 3", classroom: [205], was: {name: "Предмет 3", classroom: [207]} as WasData},
 							{name: "Предмет 4", classroom: [202], was: {name: "Предмет 2", classroom: [201]}},
 							{name: "Пр.5/Пр.6", classroom: [103,216], was: null},
 							{name: "Пр.6/Пр.5", classroom: [216,103], was: {name: "Пр.5/Пр.6", classroom: [103,216]} as WasData}
-						]
+						];
 						console.log(arr);
 						var nodes: Array<React.ReactNode> = [];
-						for (var i = 1; i < arr.length; i++) {
+						for (var i = 0; i < arr.length; i++) {
 							nodes.push(
 								<ScheduleElement
-									index={i}
+									index={i+1}
 									subject={arr[i].name}
 									classroom={arr[i].classroom}
 									wasData={arr[i].was}
