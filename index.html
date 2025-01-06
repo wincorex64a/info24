@@ -3,19 +3,19 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" type="text/css" href="/src/style.css" />
+		<link rel="stylesheet" type="text/css" href="./src/styles.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>🔷 Vite + TypeScript</title>
 	</head>
 	<body>
-		<script type="module" src="/src/App.tsx"></script>
+		<script type="module" src="./src/App.tsx"></script>
 		<script type="module">
 			import { pageutils } from "./src/App";
 		</script>
 		<div id="root">
 			<header>
 				<a href="https://litsey24.ru/index" id="icon-container">
-					<img height="80" src="logo.png" id="icon" />
+					<img height="100" src="./public/logo.png" id="icon" />
 				</a>
 				<a id="news">Новости</a>
 				<div id="datetime">
@@ -35,7 +35,7 @@
 			</header>
 			<main>
 				<div class="frame" id="class-select">
-					<select id="class-selector">
+					<label for="class-selector"></label><select id="class-selector">
 						<option selected disabled>Выберите класс</option>
 						<option value="A_5">5А</option>
 						<option value="B_5">5Б</option>

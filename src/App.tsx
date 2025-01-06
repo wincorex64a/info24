@@ -23,7 +23,7 @@ interface ScheduleData {
 	};
 }
 
-function isNotNull(value: WasData | null): value is WasData {
+function isNotNull<T>(value: T | null): value is T {
 	return value !== null;
 }
 function arrayIsNotNull<T>(array: Array<T> | null): array is Array<T> {
@@ -108,7 +108,7 @@ export var pageutils = {
 						console.log(selectedClass);
 					}
 				});
-				let intervalId2 = setInterval(() => {
+				/*let intervalId2 = */setInterval(() => {
 					if (selectedClass) {
 						let dotw: DOTW;
 						switch (new Date().getDay()) {

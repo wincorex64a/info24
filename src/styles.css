@@ -1,9 +1,9 @@
 @font-face {
-	font-family: "Gotham";
+	font-family: "Gotham", sans-serif;
 	src: url("../Gotham.woff2");
 }
 #root {
-	font-family: "Gotham";
+	font-family: "Gotham", sans-serif;
 	display: grid;
 }
 header {
@@ -27,20 +27,22 @@ header {
 }
 select {
 	border-radius: 5px;
-	border: 5px;
-	border-color: black;
-	font-family: "Gotham";
+	border: 5px black;
+	font-family: "Gotham", sans-serif;
+}
+label {
+	font-family: "Gotham", sans-serif;
 }
 option,button,input {
 	border-radius: 5px;
 	border-color: black;
-	font-family: "Gotham";
+	font-family: "Gotham", sans-serif;
 }
 main {
 	display: inline-flex;
 }
 .frame {
-	box-shadow: black 8px 8px 20px 0px;
+	box-shadow: black 8px 8px 20px 0;
 	border-radius: 50px;
 	padding: 30px;
 }
