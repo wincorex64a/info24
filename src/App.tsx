@@ -30,6 +30,9 @@ function isNotNull<T>(value: T | null): value is T {
 function arrayIsNotNull<T>(array: Array<T> | null): array is Array<T> {
 	return array !== null;
 }
+
+
+
 let data: ScheduleData;
 let xhr: XMLHttpRequest = new XMLHttpRequest();
 xhr.open("GET", "../src/res/s20250901.json", false);
@@ -83,7 +86,7 @@ function ScheduleElement({
 						margin: "2px 0px 0px 0px",
 						color: (isNotNull(wasData) && wasData.classroom != classroom) ? "red" : "inherit",
 					}}
-					title={isNotNull(wasData) ? "Было: ".concat((arrayIsNotNull(wasData.classroom) ? wasData.classroom : "—").toString()) : "Изначальное значение"}
+					title={isNotNull(wasData) ? "Было: ".concat((arrayIsNotNull(wasData.classroom) ? wasData.classroom.join("/") : "—").toString()) : "Изначальное значение"}
 				>
 					{arrayIsNotNull(classroom) ? classroom.join("/") : "—"}
 				</p>
@@ -109,7 +112,6 @@ export let pageutils: {
 						selectedClass = "_".concat((event.target as HTMLOptionElement).value.split("_").reverse().join(""));
 						tab.unmount();
 						tab = ReactDOM.createRoot(scheduleTab);
-						console.log(selectedClass);
 					}
 				});
 				/*let intervalId2 = */setInterval((): void => {
@@ -137,7 +139,6 @@ export let pageutils: {
 							default:
 								return;
 						}
-						console.log(dotw);
 						let arr: {name: string, classroom: number[] | null, was: WasData | null}[] = data.classes[selectedClass][dotw] || [
 							{name: "Предмет 1", classroom: null, was: null},
 							{name: "Предмет 2", classroom: [109], was: {name: "Предмет 1", classroom: null} as WasData},
@@ -146,7 +147,6 @@ export let pageutils: {
 							{name: "Пр.5/Пр.6", classroom: [103,216], was: null},
 							{name: "Пр.6/Пр.5", classroom: [216,103], was: {name: "Пр.5/Пр.6", classroom: [103,216]} as WasData}
 						];
-						console.log(arr);
 						let nodes: Array<React.ReactNode> = [];
 						for (let i: number = 0; i < arr.length; i++) {
 							nodes.push(

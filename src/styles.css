@@ -21,6 +21,7 @@ header {
 	width: -webkit-fill-available;
 }
 #datetime {
+	width: 180px;
 	display: inline-grid;
 	justify-items: center;
 	justify-self: right;
