@@ -20,6 +20,9 @@ header {
 	padding-right: 20px;
 	width: -webkit-fill-available;
 }
+#schedule {
+	display: grid;
+}
 #datetime {
 	width: 180px;
 	display: inline-grid;

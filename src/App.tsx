@@ -1,10 +1,8 @@
 import "./styles.css";
 import ReactDOM from "react-dom/client";
 import React from "react";
-type WasData = {
-	name: string;
-	classroom: number[] | null;
-};
+const current: string = "20250901";
+const previous: string = "" || current;
 type DOTW = 
 	"monday" | 
 	"tuesday" | 
@@ -18,7 +16,6 @@ interface ScheduleData {
 			[day: string]: {
 				name: string;
 				classroom: number[] | null;
-				was: WasData | null;
 			}[];
 		};
 	};
@@ -35,23 +32,35 @@ function arrayIsNotNull<T>(array: Array<T> | null): array is Array<T> {
 
 let data: ScheduleData;
 let xhr: XMLHttpRequest = new XMLHttpRequest();
-xhr.open("GET", "../src/res/s20250901.json", false);
+xhr.open("GET", "../src/res/s" + current + ".json", false);
 xhr.send();
 if (xhr.status === 200) {
 	data = JSON.parse(xhr.responseText) as ScheduleData;
 } else {
 	console.error(xhr.status.toString().concat(" ", xhr.statusText));
 }
+
+let prev_data: ScheduleData;
+let next_xhr: XMLHttpRequest = new XMLHttpRequest();
+next_xhr.open("GET", "../src/res/s" + previous + ".json", false);
+next_xhr.send();
+if (next_xhr.status === 200) {
+    prev_data = JSON.parse(next_xhr.responseText) as ScheduleData;
+} else {
+    console.error(next_xhr.status.toString().concat(" ", next_xhr.statusText));
+}
 function ScheduleElement({
 	index,
 	subject,
 	classroom,
-	wasData,
+	prev_subject,
+	prev_classroom,
 }: {
 	index: number;
 	subject: string;
 	classroom: number[] | null;
-	wasData: WasData | null;
+	prev_subject: string;
+	prev_classroom: number[] | null;
 }): React.ReactElement {
 	return (
 		<div
@@ -62,6 +71,7 @@ function ScheduleElement({
 			}}
 		>
 			<p
+				className="subject_number"
 				style={{
 					margin: "5px 13px 5px 5px",
 					fontSize: "xxx-large",
@@ -73,20 +83,20 @@ function ScheduleElement({
 			</p>
 			<div>
 				<p
+					className="subject_name"
 					style={{
 						margin: "0px 0px 2px 0px",
-						color: (isNotNull(wasData) && wasData.name != subject) ? "red" : "inherit",
+						color: (subject != prev_subject ? "red" : "inherit"),
 					}}
-					title={isNotNull(wasData) ? "Было: ".concat(wasData.name) : "Изначальное значение"}
 				>
 					{subject}
 				</p>
 				<p
+					className="subject_location"
 					style={{
 						margin: "2px 0px 0px 0px",
-						color: (isNotNull(wasData) && wasData.classroom != classroom) ? "red" : "inherit",
+						color: (classroom?.toString() != prev_classroom?.toString()) ? "red" : "inherit",
 					}}
-					title={isNotNull(wasData) ? "Было: ".concat((arrayIsNotNull(wasData.classroom) ? wasData.classroom.join("/") : "—").toString()) : "Изначальное значение"}
 				>
 					{arrayIsNotNull(classroom) ? classroom.join("/") : "—"}
 				</p>
@@ -110,8 +120,6 @@ export let pageutils: {
 				classSelector.addEventListener("change", (event: Event): void => {
 					if (event.target) {
 						selectedClass = "_".concat((event.target as HTMLOptionElement).value.split("_").reverse().join(""));
-						tab.unmount();
-						tab = ReactDOM.createRoot(scheduleTab);
 					}
 				});
 				/*let intervalId2 = */setInterval((): void => {
@@ -139,14 +147,8 @@ export let pageutils: {
 							default:
 								return;
 						}
-						let arr: {name: string, classroom: number[] | null, was: WasData | null}[] = data.classes[selectedClass][dotw] || [
-							{name: "Предмет 1", classroom: null, was: null},
-							{name: "Предмет 2", classroom: [109], was: {name: "Предмет 1", classroom: null} as WasData},
-							{name: "Предмет 3", classroom: [205], was: {name: "Предмет 3", classroom: [207]} as WasData},
-							{name: "Предмет 4", classroom: [202], was: {name: "Предмет 2", classroom: [201]}},
-							{name: "Пр.5/Пр.6", classroom: [103,216], was: null},
-							{name: "Пр.6/Пр.5", classroom: [216,103], was: {name: "Пр.5/Пр.6", classroom: [103,216]} as WasData}
-						];
+						let arr: {name: string, classroom: number[] | null}[] = data.classes[selectedClass][dotw];
+						let prev_arr: {name: string, classroom: number[] | null}[] = prev_data.classes[selectedClass][dotw];
 						let nodes: Array<React.ReactNode> = [];
 						for (let i: number = 0; i < arr.length; i++) {
 							nodes.push(
@@ -154,7 +156,8 @@ export let pageutils: {
 									index={i+1}
 									subject={arr[i].name}
 									classroom={arr[i].classroom}
-									wasData={arr[i].was}
+									prev_subject={prev_arr[i].name}
+									prev_classroom={prev_arr[i].classroom}
 								/>
 							);
 						}
