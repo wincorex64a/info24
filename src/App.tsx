@@ -73,9 +73,12 @@ function ScheduleElement({
 			<p
 				className="subject_number"
 				style={{
+					display: "grid",
+					justifyContent: "center",
 					margin: "5px 13px 5px 5px",
 					fontSize: "xxx-large",
 					fontWeight: "bold",
+					width: 30,
 					color: "inherit",
 				}}
 			>
@@ -163,7 +166,7 @@ export let pageutils: {
 						}
 						tab.render(<>{nodes}</>);
 					}
-				}, 1000);
+				}, 256);
 			}
 		}, 1000);
 	},
