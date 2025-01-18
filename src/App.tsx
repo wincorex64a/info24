@@ -1,6 +1,7 @@
 import "./styles.css";
 import ReactDOM from "react-dom/client";
 import React from "react";
+import News from "./News";
 const current: string = "20250901";
 const previous: string = "" || current;
 interface ScheduleData {
@@ -100,6 +101,8 @@ function ScheduleElement({
 		</div>
 	);
 }
+// @ts-ignore
+globalThis.news = new News();
 export let pageutils: {
 	launchScheduleLoader: () => void,
 	activateClock: () => void
