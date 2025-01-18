@@ -3,13 +3,6 @@ import ReactDOM from "react-dom/client";
 import React from "react";
 const current: string = "20250901";
 const previous: string = "" || current;
-type DOTW = 
-	"monday" | 
-	"tuesday" | 
-	"wednesday" | 
-	"thursday" | 
-	"friday" | 
-	"saturday";
 interface ScheduleData {
 	classes: {
 		[key: string]: {
@@ -126,46 +119,32 @@ export let pageutils: {
 					}
 				});
 				/*let intervalId2 = */setInterval((): void => {
-					if (selectedClass) {
-						let dotw: DOTW;
-						switch (new Date().getDay()) {
-							case 1:
-								dotw = "monday";
-								break;
-							case 2:
-								dotw = "tuesday";
-								break;
-							case 3:
-								dotw = "wednesday";
-								break;
-							case 4:
-								dotw = "thursday";
-								break;
-							case 5:
-								dotw = "friday";
-								break;
-							case 6:
-								dotw = "saturday";
-								break;
-							default:
-								return;
-						}
-						let arr: {name: string, classroom: number[] | null}[] = data.classes[selectedClass][dotw];
-						let prev_arr: {name: string, classroom: number[] | null}[] = prev_data.classes[selectedClass][dotw];
-						let nodes: Array<React.ReactNode> = [];
-						for (let i: number = 0; i < arr.length; i++) {
-							nodes.push(
-								<ScheduleElement
-									index={i+1}
-									subject={arr[i].name}
-									classroom={arr[i].classroom}
-									prev_subject={prev_arr[i].name}
-									prev_classroom={prev_arr[i].classroom}
-								/>
-							);
-						}
-						tab.render(<>{nodes}</>);
-					}
+				    if (selectedClass) {
+				        let dotw: string;
+				        const dotwSelector = document.getElementById('dotw-selector') as HTMLSelectElement;
+				        if (dotwSelector) {
+				            dotw = dotwSelector.value;
+				        } else {
+				            console.error('Day of the week selector not found');
+				            return;
+				        }
+
+				        let arr: {name: string, classroom: number[] | null}[] = data.classes[selectedClass][dotw];
+				        let prev_arr: {name: string, classroom: number[] | null}[] = prev_data.classes[selectedClass][dotw];
+				        let nodes: Array<React.ReactNode> = [];
+				        for (let i: number = 0; i < arr.length; i++) {
+				            nodes.push(
+				                <ScheduleElement
+				                    index={i+1}
+				                    subject={arr[i].name}
+				                    classroom={arr[i].classroom}
+				                    prev_subject={prev_arr[i].name}
+				                    prev_classroom={prev_arr[i].classroom}
+				                />
+				            );
+				        }
+				        tab.render(<>{nodes}</>);
+				    }
 				}, 256);
 			}
 		}, 1000);
