@@ -49,7 +49,7 @@ function processClassrooms(array: number[]): string[] {
 				classes.push("Спортивный зал");
 				break;
 			default:
-				classes.push(i.toString());
+				classes.push("Кабинет " + i.toString());
 				break;
 		}
 	}
