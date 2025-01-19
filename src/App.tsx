@@ -18,9 +18,6 @@ interface ScheduleData {
 function isNotNull<T>(value: T | null): value is T {
 	return value !== null;
 }
-function arrayIsNotNull<T>(array: Array<T> | null): array is Array<T> {
-	return array !== null;
-}
 
 
 
@@ -42,6 +39,21 @@ if (next_xhr.status === 200) {
     prev_data = JSON.parse(next_xhr.responseText) as ScheduleData;
 } else {
     console.error(next_xhr.status.toString().concat(" ", next_xhr.statusText));
+}
+
+function processClassrooms(array: number[]): string[] {
+	let classes: string[] = [];
+	for (const i of array) {
+		switch (i) {
+			case 97:
+				classes.push("Спортивный зал");
+				break;
+			default:
+				classes.push(i.toString());
+				break;
+		}
+	}
+	return classes;
 }
 function ScheduleElement({
 	index,
@@ -95,7 +107,7 @@ function ScheduleElement({
 						color: (classroom?.toString() != prev_classroom?.toString()) ? "red" : "inherit",
 					}}
 				>
-					{arrayIsNotNull(classroom) ? classroom.join("/") : "—"}
+					{isNotNull(classroom) ? processClassrooms(classroom).join("/") : "—"}
 				</p>
 			</div>
 		</div>

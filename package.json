@@ -12,7 +12,9 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"@types/express": "^5.0.0",
 		"@types/jquery": "^3.5.32",
+		"@types/node": "^22.10.7",
 		"@types/react": "^18.0.15",
 		"@types/react-dom": "^18.0.6",
 		"@vitejs/plugin-react": "^2.0.0",
@@ -25,6 +27,7 @@
 		"babel": "^5.8.38",
 		"browserslist": "^4.24.3",
 		"caniuse-lite": "^1.0.30001690",
+		"express": "^4.21.2",
 		"is-core-module": "^2.16.1",
 		"jquery": "^3.7.1",
 		"jquery-csv": "^1.0.40",
